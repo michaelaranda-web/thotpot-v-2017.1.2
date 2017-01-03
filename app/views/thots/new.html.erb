@@ -1,0 +1,21 @@
+<h1>Thot#new</h1>
+<p>Find me in app/views/thot/new.html.erb</p>
+
+<%= form_tag("/thots", method: "post") do %>
+    <p>
+      <%= label_tag(:title, "Title:") %>
+      <%= text_field_tag(:title) %>
+    </p>
+
+    <p>
+      <%= label_tag(:details, "Details:") %>
+      <%= text_area_tag(:details) %>
+    </p>
+
+    <p>
+      <%= label_tag(:category, "Category:") %>
+      <%= text_field_tag(:category) %>
+    </p>
+
+    <%= submit_tag("Create Thot") %>
+<% end %>
