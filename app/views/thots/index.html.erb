@@ -1,8 +1,8 @@
 <h1>Thot#index</h1>
 <p>Find me in app/views/thot/index.html.erb</p>
 
-<% @thots.each do |thot| %>
-  <h3><%= thot.title%></h3>
-  <p><%= thot.id%></p>
-  <p><%= thot.details%></p>
+<% @categories.each do |category| %>
+    <div>
+      <%= link_to(category.title, thots_category_path(category_title: category.url_friendly_title)) %>
+    </div>
 <% end %>
