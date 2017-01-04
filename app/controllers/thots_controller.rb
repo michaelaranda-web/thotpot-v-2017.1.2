@@ -1,11 +1,5 @@
 class ThotsController < ApplicationController
   def index
-    @categories = Category.all
-  end
-
-  def category
-    category_id = Category.find_by(url_friendly_title: params[:category_title]).id
-    @thots = Thot.where(category_id: category_id)
   end
 
   def new
@@ -27,5 +21,16 @@ class ThotsController < ApplicationController
         details: params[:details],
         category_id: category.id
     )
+
+    redirect_to thots_index_path
+  end
+
+  def category
+    category_id = Category.find_by(url_friendly_title: params[:category_title]).id
+    @thots = Thot.where(category_id: category_id)
+  end
+
+  def categories
+    @categories = Category.all
   end
 end

@@ -1,8 +1,5 @@
 <h1>Thot#index</h1>
 <p>Find me in app/views/thot/index.html.erb</p>
 
-<% @categories.each do |category| %>
-    <div>
-      <%= link_to(category.title, thots_category_path(category_title: category.url_friendly_title)) %>
-    </div>
-<% end %>
+<%= link_to "Create New Thot", new_thot_path, class: 'button' %>
+<%= link_to "Browse Categories", thots_categories_path, class: 'button' %>

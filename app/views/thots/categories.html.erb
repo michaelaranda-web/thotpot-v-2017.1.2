@@ -1,0 +1,8 @@
+<h1>Thot#categories</h1>
+<p>Find me in app/views/thot/categories.html.erb</p>
+
+<% @categories.each do |category| %>
+    <div>
+      <%= link_to(category.title, thots_category_path(category_title: category.url_friendly_title)) %>
+    </div>
+<% end %>
