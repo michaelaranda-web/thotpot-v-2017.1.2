@@ -3,3 +3,5 @@
 
 <%= link_to "Create New Thot", new_thot_path, class: 'button' %>
 <%= link_to "Browse Categories", thots_categories_path, class: 'button' %>
+
+<%= react_component('ThotWindow', thot_title: 'Title', thot_details: 'details') %>

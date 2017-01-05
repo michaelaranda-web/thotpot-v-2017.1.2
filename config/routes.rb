@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'thots#index'
 
+  namespace :api do
+    get 'thots/:id' => 'thots#show'
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
