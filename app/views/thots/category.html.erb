@@ -2,7 +2,17 @@
 <p>Find me in app/views/thot/category.html.erb</p>
 
 <% @thots.each do |thot| %>
-    <h3><%= thot.title %></h3>
-    <p><%= thot.id %></p>
-    <p><%= thot.details %></p>
+    <div class=<%= "thot-#{thot.id}" %>>
+      <h3><%= thot.title %></h3>
+      <p><%= thot.details %></p>
+
+      <div>
+        <a href="#"
+           class="delete-button">
+          Delete
+        </a>
+      </div>
+    </div>
+    <br>
+    ------------
 <% end %>

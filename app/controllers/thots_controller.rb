@@ -33,4 +33,8 @@ class ThotsController < ApplicationController
   def categories
     @categories = Category.all
   end
+
+  def destroy
+    @thot = Thot.destroy(params[:id])
+  end
 end
