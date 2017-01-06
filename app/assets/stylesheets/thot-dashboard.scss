@@ -1,0 +1,26 @@
+#thot-dashboard {
+  #thot-search-bar {
+    width: 500px;
+    float: left;
+    margin-right: 10px;
+  }
+
+  .dashboard-window {
+    width: 650px;
+    height: 400px;
+    margin-top: 15px;
+  }
+
+  #thot-window {
+    background-color: #BBBBBB;
+  }
+
+  #results-window {
+    background-color: #bbae8d;
+  }
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
