@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     get 'thots/:id' => 'thots#show'
+    get 'search' => 'thots#search'
   end
 
   # Example of regular route:
