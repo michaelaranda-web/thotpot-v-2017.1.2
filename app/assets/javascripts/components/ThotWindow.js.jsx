@@ -16,7 +16,7 @@ class ThotWindow extends React.Component {
     if(this.props.displayedThot) {
       return (
         <div id="thot-window" className="dashboard-window">
-          <div>{this.props.displayedThot.thot.title}</div>
+          <div className="result-title">{this.props.displayedThot.thot.title}</div>
           <div>{this.props.displayedThot.thot.details}</div>
         </div>
       )
@@ -37,12 +37,9 @@ class ThotWindow extends React.Component {
             this.props.displayedThot.relatedThots.map(function (relatedThot) {
               i++;
               return (
-                  <div key={i}>
-                    <div>{relatedThot.title}</div>
-                    <div>{relatedThot.details}</div>
-                  </div>
+                  <RelatedThot thot={relatedThot} fetchThot={this.props.fetchThot} />
               );
-            })
+            }.bind(this))
           }
         </div>
       );

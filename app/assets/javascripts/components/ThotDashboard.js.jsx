@@ -15,7 +15,8 @@ class ThotDashboard extends React.Component {
         <ThotSearchBar
             onSearch={this.searchThots.bind(this)} />
         <ThotWindow displayedThot={this.state.displayedThot}
-                    isShown={!this.state.displayResults} />
+                    isShown={!this.state.displayResults}
+                    fetchThot={this.fetchThot.bind(this)} />
         <ResultsWindow
             results={ this.state.searchResults }
             isShown={this.state.displayResults}

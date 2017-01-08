@@ -3,7 +3,7 @@
 
 <% @thots.each do |thot| %>
     <div class=<%= "thot-#{thot.id}" %>>
-      <h3><%= thot.title %></h3>
+      <h3><%= "(#{thot.id}) #{thot.title}" %></h3>
       <p><%= thot.details %></p>
 
       <div>

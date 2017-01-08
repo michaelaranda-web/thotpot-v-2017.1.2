@@ -19,7 +19,8 @@ class ThotsController < ApplicationController
     @created_thot = Thot.create!(
         title: params[:title],
         details: params[:details],
-        category_id: category.id
+        category_id: category.id,
+        parent_id: params[:parent_id]
     )
 
     redirect_to thots_index_path
