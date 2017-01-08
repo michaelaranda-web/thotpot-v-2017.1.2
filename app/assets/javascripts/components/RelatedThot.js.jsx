@@ -1,7 +1,7 @@
 class RelatedThot extends React.Component {
   render() {
     return (
-        <div className="related-thot" onClick={this._onClick.bind(this)}>
+        <div className="related-thot result" onClick={this._onClick.bind(this)}>
           <div className="result-title">{this.props.thot.title}</div>
           <div className="result-details">{this.props.thot.details}</div>
           <hr/>
