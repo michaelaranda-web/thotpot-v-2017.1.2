@@ -4,7 +4,7 @@ class ThotDashboard extends React.Component {
     super(props);
     this.state = {
       displayResults: false,
-      displayedThot: { title: "Thot title", details: "Thot details" },
+      displayedThot: null,
       searchResults: [],
     }
   }
@@ -30,7 +30,7 @@ class ThotDashboard extends React.Component {
       context: this,
       url: '/api/thots/' + id,
       success: function(data) {
-        this._onFetchThotSuccess(data.thot);
+        this._onFetchThotSuccess(data);
       },
       error: function(xhr) {
         console.log("dang");
@@ -57,7 +57,7 @@ class ThotDashboard extends React.Component {
     this.setState({displayResults: true, searchResults: results});
   }
 
-  _onFetchThotSuccess(thot) {
-    this.setState({displayedThot: thot, displayResults: false});
+  _onFetchThotSuccess(thotData) {
+    this.setState({displayedThot: thotData, displayResults: false});
   }
 }
