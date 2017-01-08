@@ -15,6 +15,15 @@
     background-color: #BBBBBB;
   }
 
+  #related-thots-window {
+    width: 540px;
+    height: 400px;
+    position: absolute;
+    right: 60px;
+    top: 123px;
+    background-color: rgba(178, 47, 47, 0.3);
+  }
+
   #results-window {
     overflow: auto;
     background-color: #bbae8d;

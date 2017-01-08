@@ -3,18 +3,17 @@
 class ThotWindow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      thotTitle: this.props.thotTitle,
-      thotDetails: this.props.thotDetails
-    };
   }
 
   render() {
     return (
       <div className={this.props.isShown ? "" : "hidden"}>
         <div id="thot-window" className="dashboard-window">
-          <div>{this.state.thotTitle}</div>
-          <div>{this.state.thotDetails}</div>
+          <div>{this.props.displayedThot.title}</div>
+          <div>{this.props.displayedThot.details}</div>
+        </div>
+        <div id="related-thots-window">
+          <div>Hello</div>
         </div>
       </div>
     );

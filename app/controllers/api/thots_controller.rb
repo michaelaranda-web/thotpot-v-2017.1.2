@@ -4,8 +4,7 @@ class Api::ThotsController < ApplicationController
   def show
     thot = Thot.find(params[:id])
     render json: {
-        title: thot.title,
-        details: thot.details
+        thot: thot
     }.to_json
   end
 

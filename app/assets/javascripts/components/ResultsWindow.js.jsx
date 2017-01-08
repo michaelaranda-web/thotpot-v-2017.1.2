@@ -2,7 +2,7 @@
 
 class ResultsWindow extends React.Component {
   constructor(props) {
-      super(props);
+    super(props);
   }
 
   render() {
@@ -14,9 +14,9 @@ class ResultsWindow extends React.Component {
             this.props.results.map(function(result) {
               i++;
               return (
-                <SearchResult result={result} key={i} />
+                <SearchResult result={result} key={i} fetchThot={this.props.fetchThot} />
               );
-            })
+            }.bind(this))
           }
         </div>
       </div>
