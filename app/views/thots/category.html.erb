@@ -7,10 +7,7 @@
       <p><%= thot.details %></p>
 
       <div>
-        <a href="#"
-           class="delete-button">
-          Delete
-        </a>
+        <%= link_to "Delete", thots_destroy_path(id: thot.id), class: 'delete-button' %>
       </div>
     </div>
     <br>

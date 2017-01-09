@@ -23,7 +23,7 @@ class ThotsController < ApplicationController
         parent_id: params[:parent_id]
     )
 
-    redirect_to thots_index_path
+    redirect_to thots_category_path(category_title: Category.find(category.id).url_friendly_title)
   end
 
   def category
@@ -37,5 +37,6 @@ class ThotsController < ApplicationController
 
   def destroy
     @thot = Thot.destroy(params[:id])
+    redirect_to request.referer
   end
 end
