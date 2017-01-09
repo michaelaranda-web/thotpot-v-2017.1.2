@@ -16,8 +16,8 @@ class ThotWindow extends React.Component {
     if(this.props.displayedThot) {
       return (
         <div id="thot-window" className="dashboard-window">
-          <div className="result">
-            <div className="result-title">{this.props.displayedThot.thot.title}</div>
+          <div className="current-thot">
+            <div className="current-thot-title">{this.props.displayedThot.thot.title}</div>
             <div>{this.props.displayedThot.thot.details}</div>
           </div>
         </div>

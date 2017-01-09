@@ -1,4 +1,9 @@
 #thot-dashboard {
+
+  hr {
+    margin: 15px 0;
+  }
+
   #thot-search-bar {
     width: 500px;
     float: left;
@@ -13,6 +18,15 @@
 
   #thot-window {
     background-color: #BBBBBB;
+
+    .current-thot {
+      padding: 5px;
+    }
+
+    .current-thot-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
   }
 
   #related-thots-window {
@@ -22,6 +36,7 @@
     right: 60px;
     top: 123px;
     background-color: rgba(178, 47, 47, 0.3);
+    overflow: auto;
   }
 
   #results-window {
@@ -31,6 +46,11 @@
 
   .result-title {
     font-weight: bold;
+    margin-left: 5px;
+  }
+
+  .result-details {
+    margin-left: 5px;
   }
 
   .result {
