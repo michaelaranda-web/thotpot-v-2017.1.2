@@ -3,6 +3,13 @@ class Thot < ActiveRecord::Base
   has_many :thots, foreign_key: "parent_id"
 
   def self.search(search)
-    where("title || details LIKE ?", "%#{search}%")
+    search_results = where("title || details LIKE ?", "%#{search}%")
+    filter_child_results(search_results)
+  end
+
+  private
+
+  def self.filter_child_results(query)
+    query.where(parent_id: nil)
   end
 end
