@@ -1,60 +1,116 @@
 #thot-dashboard {
-
-  hr {
-    margin: 15px 0;
-  }
-
   #thot-search-bar {
     width: 500px;
     float: left;
     margin-right: 10px;
   }
 
-  .dashboard-window {
+  #thot-window {
     width: 650px;
     height: 400px;
-    margin-top: 15px;
-  }
-
-  #thot-window {
-    background-color: #BBBBBB;
 
     .current-thot {
-      padding: 5px;
-    }
+      padding-top: 10px;
 
-    .current-thot-title {
-      font-size: 18px;
-      font-weight: bold;
+      .current-thot-title {
+        font-size: 18px;
+        font-weight: bold;
+        height: 60px;
+        padding-left: 5px;
+        background-color: white;
+      }
+
+      .current-thot-details {
+        height: 340px;
+        padding-left: 10px;
+      }
     }
   }
 
   #related-thots-window {
-    width: 540px;
+    width: 560px;
     height: 400px;
     position: absolute;
     right: 60px;
-    top: 123px;
-    background-color: rgba(178, 47, 47, 0.3);
+    top: 184px;
+    //background-color: rgba(170, 170, 170, 0.3);
     overflow: auto;
+
+    hr {
+      margin: 0;
+    }
+
+    .related-thots-header {
+      background-color: white;
+      font-weight: bold;
+    }
+
+    .related-thot {
+      background-color: #fff;
+      height: 80px;
+      border-left: 5px solid lightblue;
+
+      .result-title {
+        font-size: 15px;
+        font-weight: bold;
+        color: #2b6dad;
+        margin-left: 10px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .result-details {
+        font-size: 12px;
+        color: gray;
+        margin: 10px 10px;
+      }
+    }
   }
 
   #results-window {
     overflow: auto;
-    background-color: #bbae8d;
+    height: 400px;
+    width: 98%;
+    //background-color: #d2d2d2;
+
+    .search-result {
+      border-left: 5px solid blue;
+    }
+  }
+
+  .results-window-header {
+    background-color: white;
+    font-weight: bold;
   }
 
   .result-title {
+    font-size: 17px;
     font-weight: bold;
-    margin-left: 5px;
+    color: #2b6dad;
+    margin-left: 10px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .result-details {
-    margin-left: 5px;
+    font-size: 12px;
+    margin: 10px 10px;
   }
 
   .result {
-    margin: 5px;
+    margin: 2px 2px 10px 2px;
+    padding: 3px;
+    background-color: #fff;
+    height: 80px;
+    overflow: hidden;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 

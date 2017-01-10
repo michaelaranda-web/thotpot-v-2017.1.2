@@ -4,7 +4,6 @@ class SearchResult extends React.Component {
       <div className="search-result result" onClick={this._onClick.bind(this)}>
         <div className="result-title">{this.props.result.title}</div>
         <div className="result-details">{this.props.result.details}</div>
-        <hr />
       </div>
     );
   }

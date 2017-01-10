@@ -9,6 +9,7 @@ class ResultsWindow extends React.Component {
     let i = 0;
     return (
       <div className={this.props.isShown ? "" : "hidden"}>
+        <div className="results-window-header">Results</div>
         <div id="results-window" className="dashboard-window">
           {
             this.props.results.map(function(result) {

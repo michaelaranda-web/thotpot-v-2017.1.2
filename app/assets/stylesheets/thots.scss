@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .main-content {
-  margin: 5px;
+  margin-top: 15px;
+  margin-left: 15px;
 }
 
 .site-header {
@@ -47,4 +48,9 @@
 
 .clearfix {
   overflow: auto;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
