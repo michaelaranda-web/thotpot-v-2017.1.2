@@ -10,7 +10,7 @@
     height: 400px;
 
     .current-thot {
-      padding-top: 10px;
+      padding-top: 20px;
 
       .current-thot-title {
         font-size: 18px;
@@ -21,8 +21,26 @@
       }
 
       .current-thot-details {
-        height: 340px;
+        height: 270px;
         padding-left: 10px;
+      }
+    }
+
+    .thot-window-bottom-panel {
+      height: 40px;
+      background-color: currentColor;
+
+      .back-button {
+        text-align: center;
+        position: relative;
+        width: 40px;
+        top: 10px;
+        left: 10px;
+        color: gray;
+        background-color: white;
+        font-weight: bold;
+        border: 1px solid gray;
+        border-radius: 5px;
       }
     }
   }
@@ -33,7 +51,6 @@
     position: absolute;
     right: 60px;
     top: 184px;
-    //background-color: rgba(170, 170, 170, 0.3);
     overflow: auto;
 
     hr {
@@ -47,7 +64,6 @@
 
     .related-thot {
       background-color: #fff;
-      height: 80px;
       border-left: 5px solid lightblue;
 
       .result-title {
@@ -73,7 +89,6 @@
     overflow: auto;
     height: 400px;
     width: 98%;
-    //background-color: #d2d2d2;
 
     .search-result {
       border-left: 5px solid blue;
@@ -105,7 +120,6 @@
     margin: 2px 2px 10px 2px;
     padding: 3px;
     background-color: #fff;
-    height: 80px;
     overflow: hidden;
 
     &:hover {

@@ -20,6 +20,8 @@ class ThotWindow extends React.Component {
             <div className="current-thot-title">{this.props.displayedThot.thot.title}</div>
             <div className="current-thot-details">{this.props.displayedThot.thot.details}</div>
           </div>
+          <ThotNavigation displayedThot={this.props.displayedThot}
+                          fetchThot={this.props.fetchThot} />
         </div>
       )
     }
