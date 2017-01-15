@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     get 'thots/:id' => 'thots#show'
+    post 'thots/create' => 'thots#create'
     get 'search' => 'thots#search'
   end
 

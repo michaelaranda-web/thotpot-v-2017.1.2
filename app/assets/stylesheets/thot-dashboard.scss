@@ -26,21 +26,52 @@
       }
     }
 
+    .new-thot-title {
+      width: 100%;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      padding-left: 5px;
+      background-color: white;
+    }
+
+    .new-thot-details {
+      height: 270px;
+      padding-left: 10px;
+    }
+
+    .add-new-thot-button {
+      margin-top: 10px;
+    }
+
     .thot-window-bottom-panel {
       height: 40px;
       background-color: currentColor;
+      position: relative;
 
-      .back-button {
+      .navigation-button {
         text-align: center;
-        position: relative;
+        position: absolute;
         width: 40px;
-        top: 10px;
-        left: 10px;
         color: gray;
         background-color: white;
         font-weight: bold;
         border: 1px solid gray;
         border-radius: 5px;
+        top: 10px;
+
+        &:hover {
+          background-color: darkgray;
+          cursor: pointer;
+        }
+
+        &.back-button {
+          left: 10px;
+        }
+
+        &.add-response-button {
+          right: 10px;
+        }
       }
     }
   }

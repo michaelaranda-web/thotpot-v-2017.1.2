@@ -17,7 +17,8 @@ class ThotDashboard extends React.Component {
         <hr />
         <ThotWindow displayedThot={this.state.displayedThot}
                     isShown={!this.state.displayResults}
-                    fetchThot={this.fetchThot.bind(this)} />
+                    fetchThot={this.fetchThot.bind(this)}
+                    updateDisplayedThot={this.updateDisplayedThot.bind(this)} />
         <ResultsWindow
             results={ this.state.searchResults }
             isShown={this.state.displayResults}
@@ -54,6 +55,10 @@ class ThotDashboard extends React.Component {
         console.log("dang");
       }
     });
+  }
+
+  updateDisplayedThot(thot) {
+    this.setState({displayedThot: thot})
   }
 
   _onSearchSuccess(results) {
