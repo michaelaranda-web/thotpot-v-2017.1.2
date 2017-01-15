@@ -16,6 +16,8 @@ class Api::ThotsController < ApplicationController
     }
   end
 
+  private
+
   def related_thots_json_array(thot)
     related_thots = []
     thot.thots.each do |currentThot|
